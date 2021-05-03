@@ -69,7 +69,9 @@ function registerTaskRouterCallbacks() {
                         number: number
                     }
                   })
+                  logger("-------------------caller details--------------------------");
                   logger("Caller Details " + response);
+                  logger("-------------------caller details--------------------------");
                 return response;
             } catch (error) {
                 return error;
