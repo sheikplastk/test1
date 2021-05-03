@@ -60,11 +60,11 @@ function registerTaskRouterCallbacks() {
         logger("---------");
         logger("reservation.created: You are reserved to handle a call from: " + reservation.task.attributes.from);
 
-        async function fetchWorker(number) {
+        async function fetchdata(number) {
             try {
                 const response = await fetch({
-                    method: 'get',
-                    url: `${url}/fetch-callerDetails`,
+                    method: 'post',
+                    url: `https://539830097051.ngrok.io/worker/fetch-caller-details`,
                     data: {
                         number: number
                     }
@@ -78,7 +78,7 @@ function registerTaskRouterCallbacks() {
             }
         }
 
-        fetchWorker(reservation.task.attributes.from);
+        fetchdata(reservation.task.attributes.from);
 
 
         if (reservation.task.attributes.selected_language) {
