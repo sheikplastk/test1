@@ -191,7 +191,6 @@ select option {
     min-width: 300px;
     flex-direction: row;
     width: 50%;
-    background-color: #75a78a;
 }
 
 .logBoxCol:last-child{
