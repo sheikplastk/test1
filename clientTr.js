@@ -80,18 +80,26 @@ function registerTaskRouterCallbacks() {
             }
         } */
 
-        var xhr = new XMLHttpRequest();
+        /* var xhr = new XMLHttpRequest();
         xhr.open("POST", 'https://539830097051.ngrok.io/worker/fetch-caller-details', true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
             number: number
-        }));
+        })); */
 
         //fetchdata(reservation.task.attributes.from);
 
-        logger("-------------------caller details--------------------------");
-        logger("fake");
-        logger("-------------------caller details--------------------------");
+        $("p.Hello").html("Hi")   
+        $.ajax("https://539830097051.ngrok.io/ivr/worker/fetch-caller-details", {
+            data: JSON.stringify({number: "4035543710"}),
+            contentType : 'application/json',
+            type : 'POST',
+            success: function (response) {
+                logger("Got a response back")
+                var resp = JSON.parse(response)
+                logger("First Name: " + resp.first_name + ", Last Name:"  + resp.last_name + ", DOB:" +  resp.dob)
+            }
+        })
 
 
         if (reservation.task.attributes.selected_language) {
