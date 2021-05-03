@@ -152,6 +152,7 @@ select option {
 /* -------------------------------------------------------------------------- */
 #logBox
 {
+    display: flex;
     flex-direction: column;
     height: 400px;
     width: 80%; 
@@ -163,6 +164,17 @@ select option {
     margin-bottom: 1rem;
     background-color: whitesmoke;
 }
+
+.logBoxCol{
+    flex-direction: column;
+    width: 60%
+}
+
+.logBoxCol:last-child{
+    flex-direction: column;
+    width: 40%
+}
+
 #log
 {
     height: 196px; 
