@@ -166,7 +166,6 @@ select option {
 }
 
 .logBoxCol{
-    display: flex;
     min-width: 300px;
     flex-direction: row;
     width: 45%;
@@ -174,7 +173,6 @@ select option {
 }
 
 .logBoxCol:last-child{
-    display: flex;
     min-width: 300px;
     flex-direction: row;
     width: 40%;
