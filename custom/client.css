@@ -166,12 +166,12 @@ select option {
 }
 
 .logBoxCol{
-    flex-direction: column;
+    flex-direction: row;
     width: 60%
 }
 
 .logBoxCol:last-child{
-    flex-direction: column;
+    flex-direction: row;
     width: 40%
 }
 
