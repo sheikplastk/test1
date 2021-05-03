@@ -168,7 +168,7 @@ select option {
 .logBoxCol{
     min-width: 300px;
     flex-direction: row;
-    width: 55%;
+    width: 45%;
     background-color: #75a78a;
 }
 
