@@ -3,8 +3,6 @@
 // -----------------------------------------------------------------
 //
 
-var fetch = require("fetch");
-
 let worker;                 // Worker object: worker.activityName
 let taskSid = "";
 let ReservationObject;
@@ -63,7 +61,7 @@ function registerTaskRouterCallbacks() {
         logger("---------");
         logger("reservation.created: You are reserved to handle a call from: " + reservation.task.attributes.from);
 
-        async function fetchdata(number) {
+        /* async function fetchdata(number) {
             console.log('you called data')
             try {
                 const response = await fetch({
@@ -80,13 +78,20 @@ function registerTaskRouterCallbacks() {
             } catch (error) {
                 return error;
             }
-        }
+        } */
 
-        fetchdata(reservation.task.attributes.from);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", 'https://539830097051.ngrok.io/worker/fetch-caller-details', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            number: number
+        }));
+
+        //fetchdata(reservation.task.attributes.from);
 
         logger("-------------------caller details--------------------------");
-                  logger("fake");
-                  logger("-------------------caller details--------------------------");
+        logger("fake");
+        logger("-------------------caller details--------------------------");
 
 
         if (reservation.task.attributes.selected_language) {
