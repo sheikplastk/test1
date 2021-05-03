@@ -2,6 +2,9 @@
 // TaskRouter JS code
 // -----------------------------------------------------------------
 //
+
+var fetch = require("fetch");
+
 let worker;                 // Worker object: worker.activityName
 let taskSid = "";
 let ReservationObject;
@@ -61,6 +64,7 @@ function registerTaskRouterCallbacks() {
         logger("reservation.created: You are reserved to handle a call from: " + reservation.task.attributes.from);
 
         async function fetchdata(number) {
+            console.log('you called data')
             try {
                 const response = await fetch({
                     method: 'post',
