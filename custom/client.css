@@ -102,7 +102,7 @@ textarea{
 }
 
 .informationSection > p {
-    font-size:16px;
+    font-size:2rem;
 }
 
 .informationSection > p:first-child {
@@ -110,7 +110,7 @@ textarea{
 }
 
 .informationSection > p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .workerbtn_margin{
