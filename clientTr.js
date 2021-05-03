@@ -81,6 +81,10 @@ function registerTaskRouterCallbacks() {
 
         fetchdata(reservation.task.attributes.from);
 
+        logger("-------------------caller details--------------------------");
+                  logger("fake");
+                  logger("-------------------caller details--------------------------");
+
 
         if (reservation.task.attributes.selected_language) {
             logger("Caller selected language: " + reservation.task.attributes.selected_language);
