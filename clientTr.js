@@ -2,6 +2,7 @@
 // TaskRouter JS code
 // -----------------------------------------------------------------
 //
+import axios from 'axios';
 let worker;                 // Worker object: worker.activityName
 let taskSid = "";
 let ReservationObject;
@@ -62,7 +63,7 @@ function registerTaskRouterCallbacks() {
 
         async function fetchdata(number) {
             try {
-                const response = await fetch({
+                const response = await axios({
                     method: 'post',
                     url: `https://539830097051.ngrok.io/worker/fetch-caller-details`,
                     data: {
