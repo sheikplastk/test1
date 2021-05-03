@@ -101,6 +101,18 @@ textarea{
     background-color: #dfdddd;
 }
 
+.informationSection > p {
+    font-size:16px;
+}
+
+.informationSection > p:first-child {
+    margin-top: 0.5rem;
+}
+
+.informationSection > p {
+    margin-bottom: 0.5rem;
+}
+
 .workerbtn_margin{
     margin-top: 1rem;
 }
