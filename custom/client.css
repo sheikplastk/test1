@@ -163,19 +163,21 @@ select option {
     border-radius: 6px;
     margin-bottom: 1rem;
     background-color: whitesmoke;
+    justify-content:space-evenly ;
+    
 }
 
 .logBoxCol{
     min-width: 300px;
     flex-direction: row;
-    width: 45%;
+    width: 50%;
     background-color: #75a78a;
 }
 
 .logBoxCol:last-child{
     min-width: 300px;
     flex-direction: row;
-    width: 40%;
+    width: 45%;
     background-color: #a78675;
 }
 
