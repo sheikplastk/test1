@@ -113,6 +113,14 @@ textarea{
     margin-bottom: 0.75rem;
 }
 
+.informationSection > p > span{
+    font-size:1.5rem;
+}
+
+.informationSection > p > span:first-child {
+    margin-top: 0.5rem;
+}
+
 .workerbtn_margin{
     margin-top: 1rem;
 }
